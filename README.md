@@ -6,7 +6,7 @@ Plataforma feita como projeto pessoal para aplicar connhecimentos e estudos. A i
  - Criação, edição e exclusão de categorias para as tarefas, bem como associar as tarefas a categorias criadas
  - Dashboard mostrando o total de tarefas, tarefas pendentes, concluídas, prioridades
 
-## Stacks
+## Tecnologias
 - HTML5
 - CSS3
 - TailwindCSS
