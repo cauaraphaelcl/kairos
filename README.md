@@ -31,6 +31,7 @@ Plataforma feita como projeto pessoal para aprofundar connhecimentos e estudos. 
  - Tarefas pendentes
  - Tarefas concluídas
  - Distribuição por prioridades
+ - Distribuição por categorias
 
 ## Tecnologias
 - HTML5
