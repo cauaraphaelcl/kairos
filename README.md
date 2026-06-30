@@ -25,3 +25,6 @@ Plataforma feita como projeto pessoal para aplicar connhecimentos e estudos. A i
 - dotenv para gerenciamento de variáveis de ambiente
 - CORS para comunicação segura entre frontend e backend
 - Nodemon para desenvolvimento (ambiente de desenvolvimento)
+
+## Status
+- Estágios iniciais de projeto
