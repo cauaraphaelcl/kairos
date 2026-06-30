@@ -26,7 +26,7 @@ Plataforma feita como projeto pessoal para aprofundar connhecimentos e estudos. 
  - Excluir categorias
  - Associar tarefas a categorias
 
- ###
+ ### Dashboard
  - Total de tarefas
  - Tarefas pendentes
  - Tarefas concluídas
