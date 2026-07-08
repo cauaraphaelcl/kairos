@@ -1,10 +1,37 @@
 # Kairos
 
-Plataforma feita como projeto pessoal para aplicar connhecimentos e estudos. A ideia é uma plataforma para criação e organização pessoal de tarefas para usuários, com sistemas de criação, visualização, edição e exclusão de tarefas, filtragem e pesquisa para facilitar a organização de tarefas. A plataforma contará com:
- - Cadastro, login, logout, autenticação de usuários, perfil e criptografia para as senhas
- - Sistema de criar, editar, excluir, visualizar, filtrar, concluir, desfazer a conclusão de tarefas e dar uma prioridade (baixa, média ou alta) para tarefas
- - Criação, edição e exclusão de categorias para as tarefas, bem como associar as tarefas a categorias criadas
- - Dashboard mostrando o total de tarefas, tarefas pendentes, concluídas, prioridades
+Plataforma feita como projeto pessoal para aprofundar connhecimentos e estudos. A ideia é uma plataforma para criação e organização pessoal de tarefas para usuários, com sistemas de criação, visualização, edição e exclusão de tarefas, filtragem e pesquisa para facilitar a organização de tarefas.
+
+## Funcionalidades
+ ### Cadastro
+ - Cadastro
+ - Login
+ - Logout
+ - Autenticação de usuários
+ - Senhas criptografadas
+ 
+ ### Tarefas
+ - Criar tarefas
+ - Editar tarefas
+ - Visualizar tarefas
+ - Excluir tarefas
+ - Filtragem de tarefas
+ - Concluir tarefas
+ - Desfazer a conclusão de tarefas
+ - Adicionar prioridade (baixa, média ou alta) para tarefas
+
+ ### Categorias
+ - Criar categorias
+ - Editar categorias
+ - Excluir categorias
+ - Associar tarefas a categorias
+
+ ### Dashboard
+ - Total de tarefas
+ - Tarefas pendentes
+ - Tarefas concluídas
+ - Distribuição por prioridades
+ - Distribuição por categorias
 
 ## Tecnologias
 - HTML5
@@ -25,3 +52,6 @@ Plataforma feita como projeto pessoal para aplicar connhecimentos e estudos. A i
 - dotenv para gerenciamento de variáveis de ambiente
 - CORS para comunicação segura entre frontend e backend
 - Nodemon para desenvolvimento (ambiente de desenvolvimento)
+
+## Status
+- Estágios iniciais de projeto
