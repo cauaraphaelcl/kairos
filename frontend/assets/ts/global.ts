@@ -1,3 +1,7 @@
+import { loadAllComponents } from './loadComponents.js';
+
+await loadAllComponents();
+
 const menuBtn = document.getElementById('burger-btn') as HTMLButtonElement;
 const asideCloseBtn = document.getElementById('aside-closebtn') as HTMLButtonElement;
 const aside = document.querySelector('aside') as HTMLElement;
@@ -11,19 +15,18 @@ function isDesktop(): boolean {
 
 // Colapsa/expande no desktop
 function toggleCollapse() {
-    const collapsing = aside.classList.contains("md:w-1/6");
+    const collapsing = !aside.classList.contains('is-collapsed');
 
-    aside.classList.toggle('md:w-1/6');
-    aside.classList.toggle('md:w-28');
     aside.classList.toggle('is-collapsed');
-    aside.classList.toggle('overflow-hidden');
-    aside.classList.toggle('overflow-visible');
 
+    const mainContent = document.getElementById('main-content');
+    mainContent?.classList.toggle('md:ml-72');
+    mainContent?.classList.toggle('md:ml-28');
 
     logoImg.src = collapsing
         ? '/frontend/assets/images/logotipo-1.svg'
         : '/frontend/assets/images/logotipo-3.svg';
-    }
+}
 
     
 // Mostra/esconde no mobile

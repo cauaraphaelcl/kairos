@@ -1,82 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Kairos </title>
-    <link rel="stylesheet" href="/frontend/assets/css/output.css">
-</head>
-<body class="m-0 p-0 bg-background font-poppins overflow-x-hidden">
-
+    <!-- Botão hambúrguer para mobile -->
     <button id="burger-btn" class="fixed top-4 left-4 z-40 cursor-pointer p-0 leading-none md:hidden">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" class="text-primary" stroke-width="2" stroke-linecap="round"/>
         </svg>
     </button>
 
-    <div class="flex w-full h-screen">
-        <aside id="aside" class="bg-white flex flex-col relative w-2/3 md:w-1/6 h-full fixed inset-y-0 left-0 transition-all duration-300 z-50 shadow-soft">
-            <div id="aside-top" class="flex flex-row w-full gap-10 justify-center items-center">
-                <a id="logo-link" href="/frontend/pages/app/index.html" class="w-45 h-auto flex">
-                    <img id="kairos-logo" src="/frontend/assets/images/logotipo-3.svg">
-                </a>
-                <button id="aside-closebtn" class="cursor-pointer group relative">
-                    <span class="relative block h-4.5 w-4.5">
-                        <img src="/frontend/assets/icons/back-arrow.svg" alt="back-icon" class="h-4.5 absolute inset-0 group-hover:opacity-0 transition-opacity duration-200">
-                        <img src="/frontend/assets/icons/back-arrow-hover.svg" alt="back-icon-hover" class="h-4.5 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    </span>
-                </button>
-            </div>
+    <!-- Sidebar -->
+    <aside id="aside" class="bg-white flex flex-col h-screen fixed inset-y-0 left-0 transition-all duration-300 z-50 shadow-soft">
+        <div id="aside-top" class="flex flex-row w-full gap-10 justify-center items-center">
+            <a id="logo-link" href="/frontend/pages/app/index.html" class="w-45 h-auto flex">
+                <img id="kairos-logo" src="/frontend/assets/images/logotipo-3.svg">
+            </a>
+            <button id="aside-closebtn" class="cursor-pointer group relative">
+                <span class="relative block h-4.5 w-4.5">
+                    <img src="/frontend/assets/icons/back-arrow.svg" alt="back-icon" class="h-4.5 absolute inset-0 group-hover:opacity-0 transition-opacity duration-200">
+                    <img src="/frontend/assets/icons/back-arrow-hover.svg" alt="back-icon-hover" class="h-4.5 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                </span>
+            </button>
+        </div>
 
-            <nav class="flex flex-col mx-6 gap-4 -mt-4">
-                <a href="../app/index.html" class="nav-link relative group">
-                    <span class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-tertiary rounded-full scale-y-100"></span>
-                    <img src="/frontend/assets/icons/home.svg" alt="home-icon" class="ml-2 w-6">
-                    <span class="nav-text"> Dashboard </span>
-                </a>
-                <a href="../app/tasks.html" class="nav-link relative group">
-                    <span class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-tertiary rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                    <img src="/frontend/assets/icons/checkmark.svg" alt="home-icon" class="ml-2 mt-0.5 w-6">
-                    <span class="nav-text"> Tarefas </span>
-                </a>
-                <a href="../app/categories.html" class="nav-link relative group">
-                    <span class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-tertiary rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                    <img src="/frontend/assets/icons/folder.svg" alt="home-icon" class="ml-2 mt-0.5 w-6">
-                    <span class="nav-text"> Categorias </span>
-                </a>
-                <a href="../app/calendar.html" class="nav-link relative group">
-                    <span class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-tertiary rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
-                    <img src="/frontend/assets/icons/calendar.svg" alt="home-icon" class="ml-2 w-6">
-                    <span class="nav-text"> Calendário </span>
-                </a>
-                
-                <hr class="border-tertiary my-2">
+        <nav class="flex flex-col mx-6 gap-4 -mt-4">
+            <a href="../app/index.html" class="nav-link relative group">
+                <span class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-tertiary rounded-full scale-y-100"></span>
+                <img src="/frontend/assets/icons/home.svg" alt="home-icon" class="ml-2 w-6">
+                <span class="nav-text"> Dashboard </span>
+            </a>
+            <a href="../app/tasks.html" class="nav-link relative group">
+                <span class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-tertiary rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                <img src="/frontend/assets/icons/checkmark.svg" alt="home-icon" class="ml-2 mt-0.5 w-6">
+                <span class="nav-text"> Tarefas </span>
+            </a>
+            <a href="../app/categories.html" class="nav-link relative group">
+                <span class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-tertiary rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                <img src="/frontend/assets/icons/folder.svg" alt="home-icon" class="ml-2 mt-0.5 w-6">
+                <span class="nav-text"> Categorias </span>
+            </a>
+            <a href="../app/calendar.html" class="nav-link relative group">
+                <span class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-tertiary rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></span>
+                <img src="/frontend/assets/icons/calendar.svg" alt="home-icon" class="ml-2 w-6">
+                <span class="nav-text"> Calendário </span>
+            </a>
+            
+            <hr class="border-tertiary my-2">
 
-                <button class="bg-linear-to-br from-primary to-tertiary p-2 text-white font-medium flex justify-center items-center gap-2 rounded-3xl cursor-pointer hover:from-secondary hover:to-secondary transition-colors duration-300">
-                    <img src="/frontend/assets/icons/plus.svg" alt="plus-icon">
-                    <span class="nav-text"> Nova tarefa </span>
-                </button>
-            </nav>
+            <!-- Botão de nova tarefa -->
+            <button class="bg-linear-to-br from-primary to-tertiary p-2 text-white font-medium flex justify-center items-center gap-2 rounded-3xl cursor-pointer hover:from-secondary hover:to-secondary transition-colors duration-300">
+                <img src="/frontend/assets/icons/plus.svg" alt="plus-icon">
+                <span class="nav-text"> Nova tarefa </span>
+            </button>
+        </nav>
 
-            <div class="mt-auto flex flex-col mx-6 gap-1 mb-6">
-                <a href="../app/configurations.html" class="sidebar-bottom-item w-auto h-auto rounded-xl text-primary text-base flex flex-row items-center gap-6 p-3 hover:font-medium transition-colors duration-300 group relative">
-                    <span class="relative w-8 h-8">
-                        <img src="/frontend/assets/icons/settings.svg" class="w-8 absolute inset-0 group-hover:opacity-0 transition-opacity duration-200">
-                        <img src="/frontend/assets/icons/settings-hover.svg" class="w-8 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    </span>
-                    <span class="nav-text"> Configurações </span>
-                </a>
-                <button class="sidebar-bottom-item w-auto h-auto rounded-xl text-primary text-base flex flex-row items-center gap-6 p-3 hover:font-medium transition-colors duration-300 group relative cursor-pointer">
-                    <span class="relative w-8 h-8">
-                        <img src="/frontend/assets/icons/logout.svg" class="w-8 absolute inset-0 group-hover:opacity-0 transition-opacity duration-200">
-                        <img src="/frontend/assets/icons/logout-hover.svg" class="w-8 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    </span>
-                    <span class="nav-text"> Sair </span>
-                </button>
-            </div>
-        </aside>
-    </div>
-
-    <script type="module" src="/frontend/assets/js/global.js"></script>
-</body>
-</html>
+        <!-- Configurações e logout -->
+        <div class="mt-auto flex flex-col mx-6 gap-1 mb-6">
+            <a href="../app/configurations.html" class="sidebar-bottom-item w-auto h-auto rounded-xl text-primary text-base flex flex-row items-center gap-6 p-3 hover:font-medium transition-colors duration-300 group relative">
+                <span class="relative w-8 h-8">
+                    <img src="/frontend/assets/icons/settings.svg" class="w-8 absolute inset-0 group-hover:opacity-0 transition-opacity duration-200">
+                    <img src="/frontend/assets/icons/settings-hover.svg" class="w-8 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                </span>
+                <span class="nav-text"> Configurações </span>
+            </a>
+            <button class="sidebar-bottom-item w-auto h-auto rounded-xl text-primary text-base flex flex-row items-center gap-6 p-3 hover:font-medium transition-colors duration-300 group relative cursor-pointer">
+                <span class="relative w-8 h-8">
+                    <img src="/frontend/assets/icons/logout.svg" class="w-8 absolute inset-0 group-hover:opacity-0 transition-opacity duration-200">
+                    <img src="/frontend/assets/icons/logout-hover.svg" class="w-8 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                </span>
+                <span class="nav-text"> Sair </span>
+            </button>
+        </div>
+    </aside>

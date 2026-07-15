@@ -12,11 +12,29 @@
     --color-secondary: #153C65;
     --color-tertiary: #3A6EA5;
     --color-links-bg: #C8D4EB;
+    --color-priority-red: #FF4E4E;
+    --color-priority-red-bg: #FFDEDE;
+    --color-priority-orange: #FFB936;
+    --color-priority-orange-bg: #FFF6DE;
+    --color-priority-green: #51BC00;
+    --color-priority-green-bg: #EBFFDE;
+    --color-placeholder-gray: #C2C2C2;
+    --color-hr-gray: #70798C;
 
     --shadow-soft: 0px 5px 15px rgba(0, 0, 0, 0.253);
 }
 
 @layer components {
+
+    @media (min-width: 48rem) {
+        #aside {
+            width: var(--sidebar-w-expanded);
+        }
+        #aside.is-collapsed {
+            width: var(--sidebar-w-collapsed);
+        }
+    }
+
     .nav-link {
     @apply bg-links-bg/45 w-auto h-auto rounded-xl text-primary text-xl flex flex-row items-center gap-6 p-3 hover:bg-links-bg/75;
     transition: gap .25s ease, padding .25s ease;
@@ -72,6 +90,14 @@
 
     .is-collapsed nav {
         margin-top: 4.65rem !important;
+    }
+
+    #aside {
+        --sidebar-w-expanded: 18rem;
+        --sidebar-w-collapsed: 7rem;
+
+        width: min(80vw, 18rem); /* mobile */
+        transition: width .3s ease;
     }
 
     /* Botão normal */
@@ -190,4 +216,4 @@
         padding-left: 0.5rem !important;
         padding-right: 0.5rem !important;
     }
-    }
+}

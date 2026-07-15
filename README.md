@@ -54,4 +54,5 @@ Plataforma feita como projeto pessoal para aprofundar connhecimentos e estudos. 
 - Nodemon para desenvolvimento (ambiente de desenvolvimento)
 
 ## Status
-- Estágios iniciais de projeto
+- Frontend em desenvolvimento
+- Layout do dashboard (index) completo

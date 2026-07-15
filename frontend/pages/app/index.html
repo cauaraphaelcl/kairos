@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Kairos </title>
+    <link rel="stylesheet" href="/frontend/assets/css/output.css">
+</head>
+<body class="m-0 p-0 bg-background font-poppins overflow-x-hidden">
+
+    <div id="sidebar"> </div>
+
+    <main id="main-content" class="ml-0 md:ml-72 pl-10 md:pl-16 pr-4 md:pr-8 py-4 md:py-8 pt-24 md:pt-12 transition-all duration-300">
+
+        <!-- Header -->
+        <header>
+            <div class="flex items-center justify-between mb-6">
+                <h1 class="text-2xl md:text-3xl font-medium text-primary">Seja bem-vindo, user!</h1>
+                <button class="cursor-pointer p-2 rounded-full hover:bg-links-bg/45 transition-colors duration-200">
+                    <img src="/frontend/assets/icons/darkmode.svg" alt="dark-mode-icon" class="w-6 h-6">
+                </button>
+            </div>
+
+            <!-- Cards de estatísticas -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mb-6">
+                <div class="bg-white rounded-xl shadow-soft p-4 flex items-center gap-3">
+                    <img src="/frontend/assets/icons/tasks.svg" alt="total-icon" class="w-9 h-9 shrink-0">
+                    <div class="min-w-0">
+                        <p class="text-xs text-secondary truncate">Total</p>
+                        <p class="text-xl font-medium text-primary">32</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-soft p-4 flex items-center gap-3">
+                    <img src="/frontend/assets/icons/outstanding.svg" alt="pendentes-icon" class="w-9 h-9 shrink-0">
+                    <div class="min-w-0">
+                        <p class="text-xs text-secondary truncate">Pendentes</p>
+                        <p class="text-xl font-medium text-primary">10</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-soft p-4 flex items-center gap-3">
+                    <img src="/frontend/assets/icons/complete.svg" alt="concluidas-icon" class="w-9 h-9 shrink-0">
+                    <div class="min-w-0">
+                        <p class="text-xs text-secondary truncate">Concluídas</p>
+                        <p class="text-xl font-medium text-primary">22</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-soft p-4 flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-full bg-[#14B8A6] shrink-0"></span>
+                    <div class="min-w-0">
+                        <p class="text-xs text-secondary truncate">Categoria 1</p>
+                        <p class="text-xl font-medium text-primary">5</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-soft p-4 flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-full bg-[#D946EF] shrink-0"></span>
+                    <div class="min-w-0">
+                        <p class="text-xs text-secondary truncate">Categoria 2</p>
+                        <p class="text-xl font-medium text-primary">20</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-soft p-4 flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-full bg-[#FACC15] shrink-0"></span>
+                    <div class="min-w-0">
+                        <p class="text-xs text-secondary truncate">Categoria 3</p>
+                        <p class="text-xl font-medium text-primary">7</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <hr class="border-hr-gray my-6">
+
+        <!-- Gráficos -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+            <div class="bg-white rounded-xl shadow-soft p-5 min-h-60">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-primary font-medium">Tarefas por prioridade</h2>
+                    <select class="text-xs text-secondary border border-tertiary/30 rounded-full pl-3 pr-7 py-1 cursor-pointer bg-white transition-colors duration-200 outline-none appearance-none bg-[url('/frontend/assets/icons/down-arrow.svg')] bg-no-repeat bg-[right_0.5rem_center] bg-[length:12px]">
+                        <option value="semana">Esta semana</option>
+                        <option value="mes" selected>Este mês</option>
+                        <option value="trimestre">Este trimestre</option>
+                        <option value="ano">Este ano</option>
+                    </select>
+                </div>
+                <!-- gráfico -->
+            </div>
+
+            <div class="bg-white rounded-xl shadow-soft p-5 min-h-60">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-primary font-medium">Tarefas por categoria</h2>
+                    <select class="text-xs text-secondary border border-tertiary/30 rounded-full pl-3 pr-7 py-1 cursor-pointer bg-white transition-colors duration-200 outline-none appearance-none bg-[url('/frontend/assets/icons/down-arrow.svg')] bg-no-repeat bg-[right_0.5rem_center] bg-[length:12px]">
+                        <option value="semana">Esta semana</option>
+                        <option value="mes" selected>Este mês</option>
+                        <option value="trimestre">Este trimestre</option>
+                        <option value="ano">Este ano</option>
+                    </select>
+                </div>
+                <!-- gráfico -->
+            </div>
+        </div>
+
+        <!-- Tarefas e resumo -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+            <!-- Próximas tarefas -->
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-soft p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-primary font-medium">Próximas tarefas</h2>
+                    <input
+                        type="text"
+                        placeholder="Buscar"
+                        class="text-xs bg-placeholder-gray/20 rounded-full px-4 py-1.5 outline-none w-32 sm:w-40"
+                    >
+                </div>
+
+                <ul class="flex flex-col gap-1">
+                    <li class="grid grid-cols-[20px_8rem_1fr_4rem_3.5rem_4rem] items-center gap-3 p-2.5 rounded-lg hover:bg-links-bg/30 transition-colors duration-200">
+                        <input type="checkbox" class="w-4 h-4 accent-secondary">
+                        <span class="text-primary text-sm truncate">Tarefa 1</span>
+                        <span class="hidden sm:flex justify-center items-center gap-2 text-xs text-secondary">
+                            <span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+                            Categoria
+                        </span>
+                        <span class="hidden md:block text-xs text-placeholder-gray whitespace-nowrap text-right">Hoje</span>
+                        <span class="text-xs text-placeholder-gray whitespace-nowrap text-right">20:00</span>
+                        <span class="text-xs font-medium text-priority-red bg-priority-red-bg rounded-md px-2.5 py-1 text-center justify-self-end">Alta</span>
+                    </li>
+
+                    <li class="grid grid-cols-[20px_8rem_1fr_4rem_3.5rem_4rem] items-center gap-3 p-2.5 rounded-lg hover:bg-links-bg/30 transition-colors duration-200">
+                        <input type="checkbox" class="w-4 h-4 accent-secondary">
+                        <span class="text-primary text-sm truncate">Tarefa 2</span>
+                        <span class="hidden sm:flex justify-center items-center gap-2 text-xs text-secondary">
+                            <span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+                            Categoria
+                        </span>
+                        <span class="hidden md:block text-xs text-placeholder-gray whitespace-nowrap text-right">Amanhã</span>
+                        <span class="text-xs text-placeholder-gray whitespace-nowrap text-right">14:00</span>
+                        <span class="text-xs font-medium text-priority-orange bg-priority-orange-bg rounded-md px-2.5 py-1 text-center justify-self-end">Média</span>
+                    </li>
+
+                    <li class="grid grid-cols-[20px_8rem_1fr_4rem_3.5rem_4rem] items-center gap-3 p-2.5 rounded-lg hover:bg-links-bg/30 transition-colors duration-200">
+                        <input type="checkbox" class="w-4 h-4 accent-secondary">
+                        <span class="text-primary text-sm truncate">Tarefa 3</span>
+                        <span class="hidden sm:flex justify-center items-center gap-2 text-xs text-secondary">
+                            <span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+                            Categoria
+                        </span>
+                        <span class="hidden md:block text-xs text-placeholder-gray whitespace-nowrap text-right">Amanhã</span>
+                        <span class="text-xs text-placeholder-gray whitespace-nowrap text-right">20:00</span>
+                        <span class="text-xs font-medium text-priority-orange bg-priority-orange-bg rounded-md px-2.5 py-1 text-center justify-self-end">Média</span>
+                    </li>
+
+                    <li class="grid grid-cols-[20px_8rem_1fr_4rem_3.5rem_4rem] items-center gap-3 p-2.5 rounded-lg hover:bg-links-bg/30 transition-colors duration-200">
+                        <input type="checkbox" class="w-4 h-4 accent-secondary">
+                        <span class="text-primary text-sm truncate">Tarefa 4</span>
+                        <span class="hidden sm:flex justify-center items-center gap-2 text-xs text-secondary">
+                            <span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+                            Categoria
+                        </span>
+                        <span class="hidden md:block text-xs text-placeholder-gray whitespace-nowrap text-right">Sábado</span>
+                        <span class="text-xs text-placeholder-gray whitespace-nowrap text-right">17:00</span>
+                        <span class="text-xs font-medium text-priority-green bg-priority-green-bg rounded-md px-2.5 py-1 text-center justify-self-end">Baixa</span>
+                    </li>
+
+                    <li class="grid grid-cols-[20px_8rem_1fr_4rem_3.5rem_4rem] items-center gap-3 p-2.5 rounded-lg hover:bg-links-bg/30 transition-colors duration-200">
+                        <input type="checkbox" class="w-4 h-4 accent-secondary">
+                        <span class="text-primary text-sm truncate">Tarefa 5</span>
+                        <span class="hidden sm:flex justify-center items-center gap-2 text-xs text-secondary">
+                            <span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+                            Categoria
+                        </span>
+                        <span class="hidden md:block text-xs text-placeholder-gray whitespace-nowrap text-right">Domingo</span>
+                        <span class="text-xs text-placeholder-gray whitespace-nowrap text-right">23:00</span>
+                        <span class="text-xs font-medium text-priority-green bg-priority-green-bg rounded-md px-2.5 py-1 text-center justify-self-end">Baixa</span>
+                    </li>
+                </ul>
+
+                <a href="../app/tasks.html" class="inline-block mt-4 text-sm text-tertiary hover:text-primary transition-colors duration-200">
+                    Ver todas as tarefas &gt;
+                </a>
+            </div>
+
+            <!-- Resumo do dia -->
+            <div class="flex flex-col gap-4">
+                <div class="bg-white rounded-xl shadow-soft p-5 flex-1">
+                    <h2 class="text-primary font-medium mb-4">Resumo do dia</h2>
+
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-links-bg/45 shrink-0"></div>
+                        <div class="min-w-0">
+                            <p class="text-primary font-medium">60%</p>
+                            <p class="text-xs text-secondary">das tarefas do dia concluídas</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-links-bg/45 shrink-0"></div>
+                        <div class="min-w-0">
+                            <p class="text-primary font-medium">3</p>
+                            <p class="text-xs text-secondary">tarefas restantes para hoje</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-links-bg/45 shrink-0"></div>
+                        <div class="min-w-0">
+                            <p class="text-primary font-medium">3</p>
+                            <p class="text-xs text-secondary">tarefas restantes para hoje</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão de nova tarefa  -->
+                <button class="bg-linear-to-br from-primary to-tertiary text-white font-medium flex items-center justify-center gap-2 rounded-xl p-3 cursor-pointer hover:from-secondary hover:to-secondary transition-colors duration-300">
+                    <img src="/frontend/assets/icons/plus.svg" alt="plus-icon" class="w-4 h-4">
+                    Nova Tarefa
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/frontend/assets/js/global.js"></script>
+</body>
+</html>
