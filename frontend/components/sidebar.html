@@ -8,7 +8,7 @@
 </head>
 <body class="m-0 p-0 bg-background font-poppins overflow-x-hidden">
 
-    <button id="burger-btn" class="cursor-pointer p-0 leading-none md:hidden">
+    <button id="burger-btn" class="fixed top-4 left-4 z-40 cursor-pointer p-0 leading-none md:hidden">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" class="text-primary" stroke-width="2" stroke-linecap="round"/>
         </svg>
@@ -17,7 +17,7 @@
     <div class="flex w-full h-screen">
         <aside id="aside" class="bg-white flex flex-col relative w-2/3 md:w-1/6 h-full fixed inset-y-0 left-0 transition-all duration-300 z-50 shadow-soft">
             <div id="aside-top" class="flex flex-row w-full gap-10 justify-center items-center">
-                <a id="logo-link" href="/frontend/pages/app/index.html" class="w-7/12 h-auto">
+                <a id="logo-link" href="/frontend/pages/app/index.html" class="w-45 h-auto flex">
                     <img id="kairos-logo" src="/frontend/assets/images/logotipo-3.svg">
                 </a>
                 <button id="aside-closebtn" class="cursor-pointer group relative">
@@ -59,14 +59,14 @@
             </nav>
 
             <div class="mt-auto flex flex-col mx-6 gap-1 mb-6">
-                <a href="../app/configurations.html" class="w-auto h-auto rounded-xl text-primary text-base flex flex-row items-center gap-6 p-3 hover:font-medium transition-colors duration-300 group relative">
+                <a href="../app/configurations.html" class="sidebar-bottom-item w-auto h-auto rounded-xl text-primary text-base flex flex-row items-center gap-6 p-3 hover:font-medium transition-colors duration-300 group relative">
                     <span class="relative w-8 h-8">
                         <img src="/frontend/assets/icons/settings.svg" class="w-8 absolute inset-0 group-hover:opacity-0 transition-opacity duration-200">
                         <img src="/frontend/assets/icons/settings-hover.svg" class="w-8 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     </span>
                     <span class="nav-text"> Configurações </span>
                 </a>
-                <button class="w-auto h-auto rounded-xl text-primary text-base flex flex-row items-center gap-6 p-3 hover:font-medium transition-colors duration-300 group relative cursor-pointer">
+                <button class="sidebar-bottom-item w-auto h-auto rounded-xl text-primary text-base flex flex-row items-center gap-6 p-3 hover:font-medium transition-colors duration-300 group relative cursor-pointer">
                     <span class="relative w-8 h-8">
                         <img src="/frontend/assets/icons/logout.svg" class="w-8 absolute inset-0 group-hover:opacity-0 transition-opacity duration-200">
                         <img src="/frontend/assets/icons/logout-hover.svg" class="w-8 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">

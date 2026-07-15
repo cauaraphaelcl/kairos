@@ -1,104 +1,180 @@
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-    @import "tailwindcss";
-    @source "../ts/*.ts";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@source "../ts/*.ts";
 
-    @theme {
-        /* Fonte */
-        --font-poppins: "Poppins", sans-serif;
+@theme {
+    /* Fonte */
+    --font-poppins: "Poppins", sans-serif;
 
-        /* Paleta de cores do Kairos */
-        --color-background: #E4EEF2;
-        --color-primary: #002041;
-        --color-secondary: #153C65;
-        --color-tertiary: #3A6EA5;
-        --color-links-bg: #C8D4EB;
+    /* Paleta de cores do Kairos */
+    --color-background: #E4EEF2;
+    --color-primary: #002041;
+    --color-secondary: #153C65;
+    --color-tertiary: #3A6EA5;
+    --color-links-bg: #C8D4EB;
 
-        --shadow-soft: 0px 5px 15px rgba(0, 0, 0, 0.253);
+    --shadow-soft: 0px 5px 15px rgba(0, 0, 0, 0.253);
+}
+
+@layer components {
+    .nav-link {
+        @apply bg-links-bg/45 w-auto h-auto rounded-xl text-primary text-xl flex flex-row items-center gap-6 p-3 hover:bg-links-bg/75;
     }
 
-    @layer components {
-        .nav-link {
-            @apply bg-links-bg/45 w-auto h-auto rounded-xl text-primary text-xl flex flex-row items-center gap-6 p-3 hover:bg-links-bg/75;
-        }
+    /* Logo */
+    #logo-link {
+        width: 130px;
+        flex-shrink: 0;
+    }
 
-            /* tamanho normal (desktop expandido) */
-        #logo-link {
-            width: 130px;
-            flex-shrink: 0;
-        }
+    /* Estado colapsado */
+    .is-collapsed #logo-link {
+        width: 130px !important;
 
-        /* tamanho fixo, absoluto, quando colapsado — não depende de porcentagem nenhuma */
-        .is-collapsed #logo-link {
-            width: 130px !important;
-        }
+        position: absolute;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -50%);
+    }
 
-        .is-collapsed .nav-link {
-            @apply justify-center gap-0 px-0;
-        }
+    .is-collapsed #kairos-logo {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
-        .is-collapsed .nav-link img {
-            margin-left: 0 !important;
-            align-self: center !important;
-        }
+    /* Topo do aside */
+    .is-collapsed #aside-top {
+        position: relative;
+        height: 90px;
 
-        .is-collapsed #aside-top {
-            flex-direction: row !important;
-            align-items: center !important;
-            justify-content: center !important;
-            gap: 0.25rem !important;
-            margin-bottom: 1rem !important;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        .is-collapsed #aside-top a {
-            flex-shrink: 0 !important;
-        }
+        overflow: visible;
+    }
 
-        .is-collapsed #logo-img {
-            width: 100% !important;
-            height: auto !important;
-            display: block;
-        }
+    .is-collapsed .nav-link {
+        @apply justify-center gap-0 px-0;
+    }
 
-        .is-collapsed #aside-closebtn span {
-            width: 0.875rem !important;
-            height: 0.875rem !important;
-        }
+    .is-collapsed .nav-link img {
+        margin-left: 0 !important;
+        align-self: center !important;
+    }
 
-        .is-collapsed nav {
-            margin-top: 0 !important;
-        }
+    .is-collapsed nav {
+        margin-top: 5rem !important;
+    }
 
-                /* Botão normal */
-        #aside-closebtn {
-            transition: all .3s ease;
-            width: 36px !important;
-            min-width: 36px !important;
-            max-width: 36px !important;
+    /* Botão normal */
+    #aside-closebtn {
+        transition: all .3s ease;
 
-            height: 36px !important;
-            min-height: 36px !important;
-            max-height: 36px !important;
-        }
+        width: 36px !important;
+        min-width: 36px !important;
+        max-width: 36px !important;
 
-        /* Apenas quando colapsado */
-        .is-collapsed #aside-closebtn {
-            position: absolute;
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+    }
 
-            top: 32px;
-            right: -18px;
+    /* Botão quando colapsado */
+    .is-collapsed #aside-closebtn {
+        position: fixed;
 
-            width: 36px;
-            height: 36px;
+        top: 75%;
+        left: calc(7rem - 18px);
+        right: -18px;
+        transform: translateY(-50%) rotate(180deg);
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            background: white;
-            border-radius: 9999px;
-            box-shadow: var(--shadow-soft);
+        width: 36px !important;
+        min-width: 36px !important;
+        max-width: 36px !important;
 
-            transform: rotate(180deg);
-            z-index: 1000;
-        }
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+
+        background: white;
+        border-radius: 9999px;
+        box-shadow: var(--shadow-soft);
+        z-index: 1000;
+    }
+
+    .is-collapsed #aside-closebtn span {
+        width: 0.875rem !important;
+        height: 0.875rem !important;
+    }
+    .nav-text {
+        opacity: 1;
+        transform: translateX(0);
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            max-width .25s ease;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .is-collapsed .nav-text {
+        opacity: 0;
+        transform: translateX(-8px);
+        max-width: 0;
+    }
+
+    #kairos-logo {
+        transition: opacity .2s ease;
+    }
+
+    .sidebar-bottom-item {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .sidebar-bottom-item > span:first-child {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+    }
+
+    .sidebar-bottom-item > span:first-child img {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+    }
+
+    .is-collapsed .sidebar-bottom-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        gap: 0 !important;
+    }
+
+    .is-collapsed .sidebar-bottom-item > span:first-child {
+        width: 2rem;
+        height: 2rem;
+        margin: 0 auto !important;
+    }
+
+    .is-collapsed .sidebar-bottom-item > span:first-child img {
+        inset: 0;
+        margin: auto;
+    }
+
+    .is-collapsed .sidebar-bottom-item .nav-text {
+        display: none;
+    }
     }

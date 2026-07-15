@@ -14,7 +14,6 @@ function toggleCollapse() {
     aside.classList.toggle('is-collapsed');
     aside.classList.toggle('overflow-hidden');
     aside.classList.toggle('overflow-visible');
-    navTexts.forEach((el) => el.classList.toggle('hidden'));
     logoImg.src = collapsing
         ? '/frontend/assets/images/logotipo-1.svg'
         : '/frontend/assets/images/logotipo-3.svg';
