@@ -329,9 +329,6 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .self-start {
-    align-self: flex-start;
-  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -529,6 +526,11 @@
         }
       }
     }
+    transition: gap .25s ease, padding .25s ease;
+  }
+  .nav-link img {
+    flex-shrink: 0;
+    width: 1.5rem;
   }
   #logo-link {
     width: 130px;
@@ -650,6 +652,12 @@
   }
   .is-collapsed .sidebar-bottom-item .nav-text {
     display: none;
+  }
+  .is-collapsed nav > button {
+    gap: 0 !important;
+    justify-content: center !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 }
 @property --tw-translate-x {

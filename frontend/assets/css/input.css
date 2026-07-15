@@ -18,7 +18,13 @@
 
 @layer components {
     .nav-link {
-        @apply bg-links-bg/45 w-auto h-auto rounded-xl text-primary text-xl flex flex-row items-center gap-6 p-3 hover:bg-links-bg/75;
+    @apply bg-links-bg/45 w-auto h-auto rounded-xl text-primary text-xl flex flex-row items-center gap-6 p-3 hover:bg-links-bg/75;
+    transition: gap .25s ease, padding .25s ease;
+    }
+
+    .nav-link img {
+    flex-shrink: 0;
+    width: 1.5rem; /* trava o tamanho do ícone, não deixa ele "respirar" durante a transição */
     }
 
     /* Logo */
@@ -176,5 +182,12 @@
 
     .is-collapsed .sidebar-bottom-item .nav-text {
         display: none;
+    }
+
+    .is-collapsed nav > button {
+        gap: 0 !important;
+        justify-content: center !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
     }
     }
