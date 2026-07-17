@@ -37,7 +37,7 @@ Plataforma feita como projeto pessoal para aprofundar connhecimentos e estudos. 
 - HTML5
 - CSS3
 - TailwindCSS
-- JavaScript
+- TypeScript
 - Node.js
 - Express.js
 - MySQL
