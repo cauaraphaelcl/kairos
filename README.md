@@ -55,3 +55,5 @@ Plataforma feita como projeto pessoal para aprofundar connhecimentos e estudos. 
 
 ## Status
 - Frontend em desenvolvimento
+  -> ✓ Layout do dashboard
+  -> ✓ Layout da página de tarefas
