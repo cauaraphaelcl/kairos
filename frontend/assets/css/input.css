@@ -20,6 +20,8 @@
     --color-priority-green-bg: #EBFFDE;
     --color-placeholder-gray: #C2C2C2;
     --color-hr-gray: #70798C;
+    --color-divisor-gray: #E6EBF6;
+    --color-tasks-bg: #F1F3F6;
 
     --shadow-soft: 0px 5px 15px rgba(0, 0, 0, 0.253);
 }

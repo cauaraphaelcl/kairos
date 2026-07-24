@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     // File Layout
-    "rootDir": "./assets/ts",
-    "outDir": "./assets/js",
+    "rootDir": "./frontend/assets/ts",
+    "outDir": "./frontend/assets/js",
 
     // Environment Settings
     "module": "esnext",
@@ -28,5 +28,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true
   },
-  "include": ["assets/ts/**/*"]
+  "include": ["frontend/assets/ts/**/*"],
+  "exclude": ["frontend/assets/js"]
 }

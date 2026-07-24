@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "css": "tailwindcss -i ./frontend/assets/css/input.css -o ./frontend/assets/css/output.css --watch",
+    "ts": "tsc --watch"
+  },
+  "dependencies": {
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
